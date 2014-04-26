@@ -5,18 +5,22 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
 
-    <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/styles.css" />
 
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 
 	<?php Yii::app()->bootstrap->register(); ?>
+            <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/styles.css" />
+
 </head>
 
 <body>
 
 <?php $this->widget('bootstrap.widgets.TbNavbar',array(
+    'fluid'=>'true',
     'items'=>array(
         array(
+            'htmlOptions'=>array('class'=>'container-fluid pull-right'),
+            'type'=>'tabs',
             'class'=>'bootstrap.widgets.TbMenu',
             'items'=>array(
                 array('label'=>'Home', 'url'=>array('/site/index')),
@@ -29,18 +33,40 @@
     ),
 )); ?>
 
-<div class="container" id="page">
+<div class="container-fluid" id="page">
+        
+    <div class="row-fluid">
+    
+        <div class="span2">
+            <?php $this->widget('bootstrap.widgets.TbMenu', array(
+                'type'=>'list',
+                'items'=>array(
+                    array('label'=>'LIST HEADER'),
+                    array('label'=>'Home', 'icon'=>'home', 'url'=>'#', 'active'=>true),
+                    array('label'=>'Library', 'icon'=>'book', 'url'=>'#'),
+                    array('label'=>'Application', 'icon'=>'pencil', 'url'=>'#'),
+                    array('label'=>'ANOTHER LIST HEADER'),
+                    array('label'=>'Profile', 'icon'=>'user', 'url'=>'#'),
+                    array('label'=>'Settings', 'icon'=>'cog', 'url'=>'#'),
+                    array('label'=>'Help', 'icon'=>'flag', 'url'=>'#'),
+                ),
+            )); ?>
+        </div>
+        <div class="span10">
+            <?php if(isset($this->breadcrumbs)):?>
+                    <?php $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
+                            'links'=>$this->breadcrumbs,
+                    )); ?><!-- breadcrumbs -->
+            <?php endif?>
 
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?><!-- breadcrumbs -->
-	<?php endif?>
+            <?php echo $content; ?>
+        </div>
+            
 
-	<?php echo $content; ?>
-
-	<div class="clear"></div>
-
+    </div>
+        
+        <div class="clear"></div>
+    
 	<div id="footer">
 		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
 		All Rights Reserved.<br/>

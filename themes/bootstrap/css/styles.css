@@ -1,3 +1,50 @@
 #page {
     padding-top: 60px;
 }
+
+.navbar{
+border-bottom: none;
+}
+
+.navbar-fixed-top .navbar-inner,
+.navbar-static-top .navbar-inner{
+-webkit-box-shadow: none;
+box-shadow: none;
+border: none;
+}
+
+.nav-tabs{
+border-bottom: none;
+}
+
+.nav-tabs > li > a {
+border-radius: 0;
+}
+
+.navbar .nav > li > a:hover,
+.navbar .nav > li > a:focus{
+-webkit-box-shadow: none;
+box-shadow: none;
+background: #fff;
+border-top: 3px solid #ddd;
+}
+
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus{
+-webkit-box-shadow: none;
+box-shadow: none;
+background: #fff;
+border-top: 3px solid #ddd;
+}
+
+.container-fluid{
+border-bottom: 1px solid #ddd;
+}
+
+.container-fluid > .nav{
+border-bottom: none;
+}
+
+
+
