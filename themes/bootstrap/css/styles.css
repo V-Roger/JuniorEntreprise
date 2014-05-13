@@ -47,11 +47,31 @@ border-bottom: none;
 }
 
 #login {
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.3);
     border-radius: 5px;
     text-align: center;
     margin: 0 auto;
+    width:400px;
 }
 
+#login img{
+    height:200px;
+}
 
+.formulaire {
+    text-align: center;
+}
 
+.formulaire-actions {
+   margin: 0 auto;
+   padding: 5px 0;
+   padding-left: 0;
+}
+
+.btn-primary {
+    background: grey;
+}
+
+.btn-primary:hover {
+    background: black;
+}
