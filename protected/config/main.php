@@ -10,7 +10,7 @@ Yii::setPathOfAlias('bootstrap', dirname(__FILE__).'/../extensions/bootstrap');
 
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'Junior Hugo',
+	'name'=>'Junior Entreprise',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -28,7 +28,9 @@ return array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'admin',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			//'ipFilters'=>array('127.0.0.1','::1'),
+			'ipFilters'=>array('127.0.0.1','::1'),
+                        'generatorPaths' => array(
+                        'bootstrap.gii',),
 		),
 		
 	),
@@ -44,6 +46,9 @@ return array(
 		'urlManager'=>array(
 			'urlFormat'=>'path',
 			'rules'=>array(
+                                'gii'=>'gii',
+                                'gii/<controller:\w+>'=>'gii/<controller>',
+                                'gii/<controller:\w+>/<action:\w+>'=>'gii/<controller>/<action>',
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
@@ -92,13 +97,7 @@ return array(
 	),
     
         'theme'=>'bootstrap', // requires you to copy the theme under your themes directory
-        'modules'=>array(
-            'gii'=>array(
-                'generatorPaths'=>array(
-                    'bootstrap.gii',
-                ),
-            ),
-        ),
+    
         'components'=>array(
             'bootstrap'=>array(
                 'class'=>'bootstrap.components.Bootstrap',
