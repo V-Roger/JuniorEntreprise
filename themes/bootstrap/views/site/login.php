@@ -9,20 +9,21 @@ $this->breadcrumbs=array(
 );
 ?>
 
-<h1>Login</h1>
+<div id="login">
+    <img alt="Junior Entreprise" src="../../img/Logo.png" height="100px;">
 
-<p>Please fill out the following form with your login credentials:</p>
+    <p>Please fill out the following form with your login credentials:</p>
 
-<div class="form">
+    <div class="form">
 
-<?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-	'id'=>'login-form',
-    'type'=>'horizontal',
+        <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
+            'id'=>'login-form',
+        'type'=>'horizontal',
 	'enableClientValidation'=>true,
 	'clientOptions'=>array(
 		'validateOnSubmit'=>true,
 	),
-)); ?>
+        )); ?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
@@ -30,7 +31,7 @@ $this->breadcrumbs=array(
 
 	<?php echo $form->passwordFieldRow($model,'password',array(
         'hint'=>'Hint: You may login with <kbd>demo</kbd>/<kbd>demo</kbd> or <kbd>admin</kbd>/<kbd>admin</kbd>',
-    )); ?>
+        )); ?>
 
 	<?php echo $form->checkBoxRow($model,'rememberMe'); ?>
 
@@ -42,6 +43,7 @@ $this->breadcrumbs=array(
         )); ?>
 	</div>
 
-<?php $this->endWidget(); ?>
+        <?php $this->endWidget(); ?>
 
-</div><!-- form -->
+    </div><!-- form -->
+</div>
