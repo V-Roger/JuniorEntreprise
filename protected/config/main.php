@@ -61,10 +61,10 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=AppliSynth',
+			'connectionString' => 'mysql:host=http://iutdoua-webetu.univ-lyon1.fr;dbname=test',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
+			'username' => 'p1305057',
+			'password' => '190908',
 			'charset' => 'utf8',
 		),
 		
