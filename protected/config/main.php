@@ -55,19 +55,21 @@ return array(
 			),
 		),
 		
+                /*
 		'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/testdrive.db',
-		),
+		),*/
 		// uncomment the following to use a MySQL database
 		
-		'db'=>array(
-			'connectionString' => 'mysql:host=http://iutdoua-webetu.univ-lyon1.fr;dbname=test',
+		 'db'=>array(
+			'connectionString' => 'mysql:host=localhost;dbname=je',
 			'emulatePrepare' => true,
-			'username' => 'p1305057',
-			'password' => '190908',
+			'username' => 'root',
+			'password' => '',
 			'charset' => 'utf8',
+			'tablePrefix' => 'tbl_',
 		),
-		
+
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',
@@ -97,7 +99,7 @@ return array(
 	),
     
         'theme'=>'bootstrap', // requires you to copy the theme under your themes directory
-    
+        
         'components'=>array(
             'bootstrap'=>array(
                 'class'=>'bootstrap.components.Bootstrap',
