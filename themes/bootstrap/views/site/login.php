@@ -4,6 +4,7 @@
 /* @var $form CActiveForm  */
 
 $this->pageTitle=Yii::app()->name . ' - Login';
+$this->layout='LoginJE';
 ?>
 
 <div id="login">

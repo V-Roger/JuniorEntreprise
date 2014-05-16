@@ -53,13 +53,9 @@
             )); ?>
         </div>
         <div class="span10">
-            <?php if(isset($this->breadcrumbs)):?>
-                    <?php $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
-                            'links'=>$this->breadcrumbs,
-                    )); ?><!-- breadcrumbs -->
-            <?php endif?>
-
+            <?php $this->beginWidget('bootstrap.widgets.TbHeroUnit') ?>
             <?php echo $content; ?>
+            <?php $this->endWidget(); ?>
         </div>
             
 
@@ -68,7 +64,7 @@
         <div class="clear"></div>
     
 	<footer id="footer">
-		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
+		Copyright &copy; <?php echo date('Y'); ?> by Virgil,Hugo,Thomas.<br/>
 		All Rights Reserved.<br/>
 		<?php echo Yii::powered(); ?>
 	</footer><!-- footer -->
