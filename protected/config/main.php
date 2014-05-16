@@ -105,10 +105,10 @@ return array(
             ),
             
             'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=je',
+			'connectionString' => 'mysql:host=iutdoua-webetu.univ-lyon1.fr;dbname=p1305057',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
+			'username' => 'p1305057',
+			'password' => '190908',
 			'charset' => 'utf8',
 		),
         ),
