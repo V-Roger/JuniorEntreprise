@@ -7,7 +7,11 @@ a {
 }
 
 .nav-list > .active > a:hover {
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.39);
+}
+
+.nav-tabs > a:hover {
+    border-bottom: none;
 }
 
 .span10{
@@ -39,6 +43,7 @@ border-radius: 0;
 box-shadow: none;
 background: #fff;
 border-top: 3px solid #ddd;
+border-bottom: none;
 }
 
 .nav-list > .active > a{
