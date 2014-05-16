@@ -6,6 +6,7 @@
  * The followings are the available columns in table 'PARTICIPE':
  * @property integer $Num_SS
  * @property integer $Num_Convention
+ * @property string $Nature_Etu
  */
 class Participe extends CActiveRecord
 {
@@ -25,11 +26,12 @@ class Participe extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('Num_SS, Num_Convention', 'required'),
+			array('Num_SS, Num_Convention, Nature_Etu', 'required'),
 			array('Num_SS, Num_Convention', 'numerical', 'integerOnly'=>true),
+			array('Nature_Etu', 'length', 'max'=>100),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('Num_SS, Num_Convention', 'safe', 'on'=>'search'),
+			array('Num_SS, Num_Convention, Nature_Etu', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -52,6 +54,7 @@ class Participe extends CActiveRecord
 		return array(
 			'Num_SS' => 'Num Ss',
 			'Num_Convention' => 'Num Convention',
+			'Nature_Etu' => 'Nature Etu',
 		);
 	}
 
@@ -75,6 +78,7 @@ class Participe extends CActiveRecord
 
 		$criteria->compare('Num_SS',$this->Num_SS);
 		$criteria->compare('Num_Convention',$this->Num_Convention);
+		$criteria->compare('Nature_Etu',$this->Nature_Etu,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

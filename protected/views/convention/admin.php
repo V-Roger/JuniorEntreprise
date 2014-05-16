@@ -49,10 +49,9 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'Nom_Projet',
 		'Num_Entreprise',
 		'PrixJour',
-		'Nature_Etu',
 		'Date_Convention',
-		/*
 		'Duree_Projet',
+		/*
 		'Date_Finprevu',
 		'Proj_Fini',
 		*/

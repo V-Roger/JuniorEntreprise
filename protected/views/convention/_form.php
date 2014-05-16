@@ -44,12 +44,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Nature_Etu'); ?>
-		<?php echo $form->textField($model,'Nature_Etu',array('size'=>40,'maxlength'=>40)); ?>
-		<?php echo $form->error($model,'Nature_Etu'); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->labelEx($model,'Date_Convention'); ?>
 		<?php echo $form->textField($model,'Date_Convention'); ?>
 		<?php echo $form->error($model,'Date_Convention'); ?>

@@ -21,10 +21,6 @@
 	<?php echo CHtml::encode($data->PrixJour); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('Nature_Etu')); ?>:</b>
-	<?php echo CHtml::encode($data->Nature_Etu); ?>
-	<br />
-
 	<b><?php echo CHtml::encode($data->getAttributeLabel('Date_Convention')); ?>:</b>
 	<?php echo CHtml::encode($data->Date_Convention); ?>
 	<br />
@@ -33,11 +29,11 @@
 	<?php echo CHtml::encode($data->Duree_Projet); ?>
 	<br />
 
-	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('Date_Finprevu')); ?>:</b>
 	<?php echo CHtml::encode($data->Date_Finprevu); ?>
 	<br />
 
+	<?php /*
 	<b><?php echo CHtml::encode($data->getAttributeLabel('Proj_Fini')); ?>:</b>
 	<?php echo CHtml::encode($data->Proj_Fini); ?>
 	<br />

@@ -32,11 +32,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'Nature_Etu'); ?>
-		<?php echo $form->textField($model,'Nature_Etu',array('size'=>40,'maxlength'=>40)); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model,'Date_Convention'); ?>
 		<?php echo $form->textField($model,'Date_Convention'); ?>
 	</div>

@@ -8,7 +8,6 @@
  * @property string $Nom_Projet
  * @property integer $Num_Entreprise
  * @property double $PrixJour
- * @property string $Nature_Etu
  * @property string $Date_Convention
  * @property integer $Duree_Projet
  * @property string $Date_Finprevu
@@ -35,11 +34,11 @@ class Convention extends CActiveRecord
 			array('Num_Convention, Nom_Projet, Num_Entreprise', 'required'),
 			array('Num_Convention, Num_Entreprise, Duree_Projet, Proj_Fini', 'numerical', 'integerOnly'=>true),
 			array('PrixJour', 'numerical'),
-			array('Nom_Projet, Nature_Etu', 'length', 'max'=>40),
+			array('Nom_Projet', 'length', 'max'=>40),
 			array('Date_Convention, Date_Finprevu', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('Num_Convention, Nom_Projet, Num_Entreprise, PrixJour, Nature_Etu, Date_Convention, Duree_Projet, Date_Finprevu, Proj_Fini', 'safe', 'on'=>'search'),
+			array('Num_Convention, Nom_Projet, Num_Entreprise, PrixJour, Date_Convention, Duree_Projet, Date_Finprevu, Proj_Fini', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,7 +63,6 @@ class Convention extends CActiveRecord
 			'Nom_Projet' => 'Nom Projet',
 			'Num_Entreprise' => 'Num Entreprise',
 			'PrixJour' => 'Prix Jour',
-			'Nature_Etu' => 'Nature Etu',
 			'Date_Convention' => 'Date Convention',
 			'Duree_Projet' => 'Duree Projet',
 			'Date_Finprevu' => 'Date Finprevu',
@@ -94,7 +92,6 @@ class Convention extends CActiveRecord
 		$criteria->compare('Nom_Projet',$this->Nom_Projet,true);
 		$criteria->compare('Num_Entreprise',$this->Num_Entreprise);
 		$criteria->compare('PrixJour',$this->PrixJour);
-		$criteria->compare('Nature_Etu',$this->Nature_Etu,true);
 		$criteria->compare('Date_Convention',$this->Date_Convention,true);
 		$criteria->compare('Duree_Projet',$this->Duree_Projet);
 		$criteria->compare('Date_Finprevu',$this->Date_Finprevu,true);

@@ -25,7 +25,6 @@ $this->menu=array(
 		'Nom_Projet',
 		'Num_Entreprise',
 		'PrixJour',
-		'Nature_Etu',
 		'Date_Convention',
 		'Duree_Projet',
 		'Date_Finprevu',
