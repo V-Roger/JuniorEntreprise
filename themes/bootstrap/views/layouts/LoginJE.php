@@ -26,7 +26,7 @@
 
     </div>
         
-        <div class="clear"></div>
+        <!--<div class="clear"></div>
     
 	<footer id="footer">
 		Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>

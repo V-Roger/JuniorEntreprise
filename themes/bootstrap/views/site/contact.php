@@ -52,7 +52,7 @@ If you have business inquiries or other questions, please fill out the following
         )); ?>
 	<?php endif; ?>
 
-	<div class="form-actions">
+	<div style='padding-left:180px;'>
 		<?php $this->widget('bootstrap.widgets.TbButton',array(
             'buttonType'=>'submit',
             'type'=>'primary',
