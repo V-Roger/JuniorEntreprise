@@ -8,7 +8,7 @@ $this->layout='LoginJE';
 ?>
 
 <div id="login">
-    <img alt="Junior Entreprise" src="../JuniorEntreprise/themes/bootstrap/img/Logo.png">
+    <img alt="Junior Entreprise" src="../JuniorEntreprise/themes/bootstrap/img/Logo3.png">
 
     <div class="formulaire">
 
