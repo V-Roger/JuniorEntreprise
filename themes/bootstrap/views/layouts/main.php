@@ -44,7 +44,7 @@
                     array('label'=>'LIST HEADER'),
                     array('label'=>'Home', 'icon'=>'home', 'url'=>'index.php', 'active'=>true),
                     array('label'=>'Etudiants', 'icon'=>'book', 'url'=>'index.php?r=Etudiant'),
-                    array('label'=>'Convention', 'icon'=>'pencil', 'url'=>'index.php?r=Convention'),
+                    array('label'=>'Conventions', 'icon'=>'pencil', 'url'=>'index.php?r=Convention'),
                     array('label'=>'ANOTHER LIST HEADER'),
                     array('label'=>'Profile', 'icon'=>'user', 'url'=>'#'),
                     array('label'=>'Settings', 'icon'=>'cog', 'url'=>'#'),

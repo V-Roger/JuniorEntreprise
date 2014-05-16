@@ -46,6 +46,10 @@ border-top: 3px solid #ddd;
 border-bottom: none;
 }
 
+.hero-unit {
+    padding-right: 10px;
+}
+
 .nav-list > .active > a{
     background-color:rgba(0, 0, 0, 0.39);
 }
