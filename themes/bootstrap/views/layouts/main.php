@@ -43,8 +43,10 @@
                 'items'=>array(
                     array('label'=>'LIST HEADER'),
                     array('label'=>'Home', 'icon'=>'home', 'url'=>'index.php', 'active'=>true),
-                    array('label'=>'Etudiants', 'icon'=>'book', 'url'=>'index.php?r=Etudiant'),
-                    array('label'=>'Conventions', 'icon'=>'pencil', 'url'=>'index.php?r=Convention'),
+                    array('label'=>'Etudiants', 'icon'=>'user', 'url'=>'index.php?r=Etudiant'),
+                    array('label'=>'Conventions', 'icon'=>'briefcase', 'url'=>'index.php?r=Convention'),
+                    array('label'=>'Acompte', 'icon'=>'magnet', 'url'=>'index.php?r=Acompte'),
+                    array('label'=>'Frais', 'icon'=>'shopping-cart', 'url'=>'index.php?r=Frais'),
                     array('label'=>'ANOTHER LIST HEADER'),
                     array('label'=>'Profile', 'icon'=>'user', 'url'=>'#'),
                     array('label'=>'Settings', 'icon'=>'cog', 'url'=>'#'),
