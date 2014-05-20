@@ -49,7 +49,7 @@
                     array('label'=>'Accueil', 'icon'=>'home', 'url'=>'index.php?r=site/page&view=gestion', 'active'=>('r=site/page&view=gestion' == $active_tab ? true : false)),
                     array('label'=>'Etudiants', 'icon'=>'user', 'url'=>'index.php?r=Etudiant', 'active'=>('r=Etudiant' == $active_tab ? true : false)),
                     array('label'=>'Conventions', 'icon'=>'book', 'url'=>'index.php?r=Convention', 'active'=>('r=Convention' == $active_tab ? true : false)),
-                    array('label'=>'Acompte', 'icon'=>'magnet', 'url'=>'index.php?r=Acompte', 'active'=>('r=Acompte' == $active_tab ? true : false)),
+                    array('label'=>'Acomptes', 'icon'=>'magnet', 'url'=>'index.php?r=Acompte', 'active'=>('r=Acompte' == $active_tab ? true : false)),
                     array('label'=>'Frais', 'icon'=>'shopping-cart', 'url'=>'index.php?r=Frais', 'active'=>('r=Frais' == $active_tab ? true : false)),
                     array('label'=>'ANOTHER LIST HEADER'),
                     array('label'=>'Profile', 'icon'=>'user', 'url'=>'#'),
