@@ -1,18 +1,18 @@
 <?php
-/* @var $this AcompteController */
+/* @var $this FraisController */
 /* @var $dataProvider CActiveDataProvider */
 
 $this->breadcrumbs=array(
-	'Acomptes',
+	'Fraises',
 );
 
 $this->menu=array(
-	array('label'=>'Create Acompte', 'url'=>array('create')),
-	array('label'=>'Manage Acompte', 'url'=>array('admin')),
+	array('label'=>'Create Frais', 'url'=>array('create')),
+	array('label'=>'Manage Frais', 'url'=>array('admin')),
 );
 ?>
 
-<h1>Acomptes</h1>
+<h1>Frais</h1>
 
     <div class="span12">
         <div id="bar" class='nav-pills'>
@@ -28,10 +28,12 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'dataProvider'=>$dataProvider,
 	'columns'=>array(
-		'Num_Acompte',
+		'Num_Frais',
                 'Num_Convention',
                 'Num_SS',
-		'Montant_HT',
+                'Num_RF',
+		'Montant_Frais',
+                'Date_Note',
 		array(
 			'class'=>'CButtonColumn',
 		),
