@@ -14,7 +14,32 @@ $this->menu=array(
 
 <h1>Conventions</h1>
 
-<?php $this->widget('zii.widgets.CListView', array(
+    <div class="span12">
+        <div id="bar" class='nav-pills'>
+        <?php
+            $this->widget('bootstrap.widgets.TbButtonGroup', array(
+                'buttons'=>$this->menu,
+                'htmlOptions'=>array('class'=>'operations'),
+            ));
+        ?>
+        </div><!-- sidebar -->
+    </div>
+
+<?php $this->widget('zii.widgets.grid.CGridView', array(
 	'dataProvider'=>$dataProvider,
-	'itemView'=>'_view',
+	'columns'=>array(
+		'Num_Convention',
+		'Nom_Projet',
+		'Num_Entreprise',
+		'PrixJour',
+		'Date_Convention',
+		'Duree_Projet',
+		/*
+		'Date_Finprevu',
+		'Proj_Fini',
+		*/
+		array(
+			'class'=>'CButtonColumn',
+		),
+	),
 )); ?>
