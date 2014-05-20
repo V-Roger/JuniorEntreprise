@@ -110,19 +110,19 @@ class ConventionController extends Controller {
     }
     
     // ATTENTION ! en cours de creation / modification
-    public function actionActionAjouterEtudiant($idConv, $idEtu) {
+    public function actionAjouterEtudiant($idConv, $idEtu) {
          $modelConvention = Convention::model()->findByPk($idConv);
          $modelEtudiant = Etudiant::model()->findByPk($idEtu);
          $modelParticipe = new Participe;
         
-            if (isset($_POST['Convention'], $_POST['Etudiant'],$_POST['Participe'])) {
-               $modelConvention->attributes = $_POST['Convention'];
-               $modelEtudiant->attributes = $_POST['Etudiant'];
+            if (isset($_POST['Participe'])) {
                $modelParticipe->attributes = $_POST['Participe'];
                if ($model->save())
-                   $this->redirect(array('view', 'id' => $model->Num_Convention));
+                   $this->redirect(array('view', 'id' => $modelConvention->Num_Convention));
 
-           $this->render('actionAjouterEtudiant');
+           $this->render('participe', array(
+               'model'=>$modelParticipe,
+           ));
        }
     }
 
