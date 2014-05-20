@@ -2,6 +2,7 @@
 /* @var $this SiteController */
 
 $this->pageTitle=Yii::app()->name;
+$this->layout = 'home';
 ?>
 
 <?php

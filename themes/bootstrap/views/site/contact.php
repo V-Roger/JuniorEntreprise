@@ -7,6 +7,7 @@ $this->pageTitle=Yii::app()->name . ' - Contact Us';
 $this->breadcrumbs=array(
 	'Contact',
 );
+$this->layout='home';
 ?>
 
 <h1>Contact Us</h1>

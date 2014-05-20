@@ -24,7 +24,7 @@
             'class'=>'bootstrap.widgets.TbMenu',
             'items'=>array(
                 array('label'=>'Accueil', 'url'=>array('/site/index')),
-                array('label'=>'Gestion', 'url'=>array('/site/page', 'view'=>'about')),
+                array('label'=>'Gestion', 'url'=>array('/site/page', 'view'=>'gestion')),
                 array('label'=>'Contact', 'url'=>array('/site/contact')),
                 array('label'=>'Connexion', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
                 array('label'=>'Déconnexion ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
@@ -36,28 +36,8 @@
 <div class="container-fluid" id="page">
         
     <div class="row-fluid">
-    
-        <div class="span2">
-            <?php 
-                $current_url=Yii::app()->request->requestUri;
-                $active_tab=parse_url($current_url,PHP_URL_QUERY);
-                            
-                $this->widget('bootstrap.widgets.TbMenu', array(
-                'type'=>'list',
-                'items'=>array(
-                    array('label'=>'Gestion'),
-                    array('label'=>'Accueil', 'icon'=>'home', 'url'=>'index.php?r=site/page&view=gestion', 'active'=>('r=site/page&view=gestion' == $active_tab ? true : false)),
-                    array('label'=>'Etudiants', 'icon'=>'user', 'url'=>'index.php?r=Etudiant', 'active'=>('r=Etudiant' == $active_tab ? true : false)),
-                    array('label'=>'Conventions', 'icon'=>'book', 'url'=>'index.php?r=Convention', 'active'=>('r=Convention' == $active_tab ? true : false)),
-                    array('label'=>'ANOTHER LIST HEADER'),
-                    array('label'=>'Profile', 'icon'=>'user', 'url'=>'#'),
-                    array('label'=>'Settings', 'icon'=>'cog', 'url'=>'#'),
-                    array('label'=>'Help', 'icon'=>'flag', 'url'=>'#'),
-                ),                    
 
-            )); ?>
-        </div>
-        <div class="span10">
+        <div class="span12">
             <?php $this->beginWidget('bootstrap.widgets.TbHeroUnit') ?>
             <?php echo $content; ?>
             <?php $this->endWidget(); ?>
