@@ -14,6 +14,17 @@ $this->menu=array(
 
 <h1>Frais</h1>
 
+    <div class="span12">
+        <div id="bar" class='nav-pills'>
+        <?php
+            $this->widget('bootstrap.widgets.TbButtonGroup', array(
+                'buttons'=>$this->menu,
+                'htmlOptions'=>array('class'=>'operations'),
+            ));
+        ?>
+        </div><!-- sidebar -->
+    </div>
+
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'dataProvider'=>$dataProvider,
 	'columns'=>array(
