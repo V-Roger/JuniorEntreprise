@@ -36,10 +36,11 @@ $this->menu=array(
 
 <?php 
 $modelParticipe = Participe::model()->findbyAttributes(array('Num_Convention' =>$model->Num_Convention));
+$dataprovider=new CActiveDataProvider('participe'); 
 
         $this->widget('zii.widgets.grid.CGridView', array(
-	'dataProvider'=>$modelParticipe->search(),
-                    'filter'=>$modelParticipe,
+	'dataProvider'=>$dataprovider,
+        'filter'=>$modelParticipe,
 	'columns'=>array(
 		'Num_Convention',
 		'Num_SS',
