@@ -9,7 +9,6 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'Create Convention', 'url'=>array('create')),
 	array('label'=>'Manage Convention', 'url'=>array('admin')),
-        array('label'=>'Ajout Etudiant', 'url'=>array('ajouteretudiant')),
 );
 ?>
 
