@@ -111,18 +111,17 @@ class ConventionController extends Controller {
     
     // ATTENTION ! en cours de creation / modification
     public function actionAjouterEtudiant($id) {
-         $modelConvention = Convention::model()->findByPk($id);
-         $modelParticipe = new Participe;
-        
+         $model = new Participe;
+         
             if (isset($_POST['Participe'])) {
-               $modelParticipe->attributes = $_POST['Participe'];
+               $model->attributes = $_POST['Participe'];
                if ($model->save())
-                   $this->redirect(array('view', 'id' => $modelConvention->Num_Convention));
-
-           $this->render('participe', array(
-               'model'=>$modelParticipe,
-           ));
+                   $this->redirect(array('view', 'id' => $model->Num_Convention)); 
        }
+       
+       $this->render('participeView', array(
+               'model'=>$model,
+           ));
     }
 
     /**

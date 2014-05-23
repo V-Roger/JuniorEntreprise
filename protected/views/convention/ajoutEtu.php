@@ -1,13 +1,13 @@
 <?php
-/* @var $this ParticipeController */
+/* @var $this ConventionController */
 /* @var $model Participe */
 /* @var $form CActiveForm */
 ?>
 
 <div class="form">
 
-<?php $form=$this->beginWidget('CActiveForm', array(
-	'id'=>'participe-ajoutEtu-form',
+<?php $form=  ConventionController::beginWidget('CActiveForm', array(
+	'id'=>'convention-ajoutEtu-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// See class documentation of CActiveForm for details on this,
@@ -39,9 +39,9 @@
 
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('Submit'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ?'Create' : 'Save'); ?>
 	</div>
 
-<?php $this->endWidget(); ?>
+<?php  ConventionController::endWidget(); ?>
 
 </div><!-- form -->
