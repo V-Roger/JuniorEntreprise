@@ -119,3 +119,7 @@ border-bottom: none;
 .btn-primary:hover {
     background: black;
 }
+
+#content .span12{
+    margin-left: 0;
+}
