@@ -10,8 +10,8 @@ $this->breadcrumbs=array(
 $this->menu=array(
 	array('label'=>'List Convention', 'url'=>array('index')),
 	array('label'=>'Create Convention', 'url'=>array('create')),
-	array('label'=>'Update Convention', 'url'=>array('update', 'id'=>Convention::Num_Convention)),
-	array('label'=>'Delete Convention', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>Convention::Num_Convention),'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>'Update Convention', 'url'=>array('update', 'id'=>$model->Num_Convention)),
+	array('label'=>'Delete Convention', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->Num_Convention),'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>'Manage Convention', 'url'=>array('admin')),
 );
 ?>
