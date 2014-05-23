@@ -44,6 +44,18 @@ $modelParticipe = Participe::model()->findbyAttributes(array('Num_Convention' =>
 		'Num_Convention',
 		'Num_SS',
 		'Nature_Etu',
+                                    array(
+                                        'class'=>'CButtonColumn',
+                                        'template'=>'{voiretudiant}',
+                                        'buttons'=>array(
+                                            'voiretudiant'=>array(
+                                            'label'=>'voir Etudiant',
+                                            'imageUrl'=>'',
+                                            'options'=>array( 'class'=>'icon-user'),
+                                            'url'=>'Yii::app()->createUrl("etudiant/view",array("id"=> $data->Num_SS))',
+                                        ),
+                                   ),
+                              ),
 	),
 )); ?>
 
