@@ -30,7 +30,7 @@ class ConventionController extends Controller {
                 'users' => array('*'),
             ),
             array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('create', 'update'),
+                'actions' => array('create', 'update', 'ajouteretudiant'),
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -110,9 +110,8 @@ class ConventionController extends Controller {
     }
     
     // ATTENTION ! en cours de creation / modification
-    public function actionAjouterEtudiant($idConv, $idEtu) {
-         $modelConvention = Convention::model()->findByPk($idConv);
-         $modelEtudiant = Etudiant::model()->findByPk($idEtu);
+    public function actionAjouterEtudiant($id) {
+         $modelConvention = Convention::model()->findByPk($id);
          $modelParticipe = new Participe;
         
             if (isset($_POST['Participe'])) {
