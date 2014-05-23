@@ -15,7 +15,12 @@
 
 <body>
 
-<?php $this->widget('bootstrap.widgets.TbNavbar',array(
+<?php 
+    $current_url=Yii::app()->request->requestUri;
+    $active_tab=parse_url($current_url,PHP_URL_QUERY);
+    $isActive = 'r=site/page&view=gestion' == $active_tab || 'r=Etudiant' == $active_tab || 'r=Convention' == $active_tab || 'r=Acompte' == $active_tab || 'r=Frais' == $active_tab;
+
+    $this->widget('bootstrap.widgets.TbNavbar',array(
     'fluid'=>'true',
     'items'=>array(
         array(
@@ -24,7 +29,7 @@
             'class'=>'bootstrap.widgets.TbMenu',
             'items'=>array(
                 array('label'=>'Accueil', 'url'=>array('/site/index')),
-                array('label'=>'Gestion', 'url'=>array('/site/page', 'view'=>'gestion')),
+                array('label'=>'Gestion', 'url'=>array('/site/page', 'view'=>'gestion'), 'active'=>$isActive ? true : false),
                 array('label'=>'Contact', 'url'=>array('/site/contact')),
                 array('label'=>'Connexion', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
                 array('label'=>'Déconnexion ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
@@ -39,9 +44,6 @@
     
         <div class="span2">
             <?php 
-                $current_url=Yii::app()->request->requestUri;
-                $active_tab=parse_url($current_url,PHP_URL_QUERY);
-                            
                 $this->widget('bootstrap.widgets.TbMenu', array(
                 'type'=>'list',
                 'items'=>array(

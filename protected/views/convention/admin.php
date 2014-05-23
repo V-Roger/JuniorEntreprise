@@ -51,10 +51,6 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'PrixJour',
 		'Date_Convention',
 		'Duree_Projet',
-		/*
-		'Date_Finprevu',
-		'Proj_Fini',
-		*/
 		array(
 			'class'=>'CButtonColumn',
 		),
