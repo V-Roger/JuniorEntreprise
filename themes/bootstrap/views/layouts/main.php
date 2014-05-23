@@ -24,7 +24,7 @@
             'class'=>'bootstrap.widgets.TbMenu',
             'items'=>array(
                 array('label'=>'Accueil', 'url'=>array('/site/index')),
-                array('label'=>'Gestion', 'url'=>array('/site/page', 'view'=>'about')),
+                array('label'=>'Gestion', 'url'=>array('/site/page', 'view'=>'gestion')),
                 array('label'=>'Contact', 'url'=>array('/site/contact')),
                 array('label'=>'Connexion', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
                 array('label'=>'Déconnexion ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
