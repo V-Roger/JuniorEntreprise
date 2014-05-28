@@ -25,12 +25,12 @@ class ConventionController extends Controller {
      */
     public function accessRules() {
         return array(
-            array('allow', // allow all users to perform 'index' and 'view' actions
-                'actions' => array('index', 'view'),
+            array('allow', // allow no unauthenticated users nothing
+                'actions' => array(''),
                 'users' => array('*'),
             ),
-            array('allow', // allow authenticated user to perform 'create' and 'update' actions
-                'actions' => array('create', 'update', 'ajouteretudiant'),
+            array('allow', // allow authenticated user to perform 'index', 'view', 'create', 'update' and 'ajouteretudiant' actions
+                'actions' => array('index', 'view', 'create', 'update', 'ajouteretudiant'),
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
