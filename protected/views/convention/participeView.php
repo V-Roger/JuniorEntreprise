@@ -19,7 +19,7 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
 	'attributes'=>array(
-                                 'Num_Convention',
+                                 'Num_Convention',  
                                  'Num_SS',  
                                  'Nature_Etu',
                         ),

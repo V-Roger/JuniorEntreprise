@@ -20,6 +20,7 @@ $criteria=new CDbCriteria;
 $criteria->select='Num_SS';  // only select the 'AlId' and 'AlDescr' columns              
 
 $num_etudiants=Etudiant::model()->findAll($criteria);
+$model->Num_Convention=$_GET['id'];
 
 ?>
 
