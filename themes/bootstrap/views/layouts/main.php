@@ -55,10 +55,10 @@
                     array('label'=>'Conventions', 'icon'=>'book', 'url'=>'index.php?r=Convention', 'active'=>('r=Convention' == $active_tab ? true : false)),
                     
                     array('label'=>'Finances'),
-                    array('label'=>'Acomptes', 'icon'=>'magnet', 'url'=>'index.php?r=Acompte', 'active'=>('r=Acompte' == $active_tab ? true : false)),
+                    array('label'=>'Acomptes', 'icon'=>'tags', 'url'=>'index.php?r=Acompte', 'active'=>('r=Acompte' == $active_tab ? true : false)),
                     array('label'=>'Frais', 'icon'=>'shopping-cart', 'url'=>'index.php?r=Frais', 'active'=>('r=Frais' == $active_tab ? true : false)),
                     array('label'=>'Rémunération', 'icon'=>'briefcase', 'url'=>'index.php?r=Remuneration', 'active'=>('r=Remuneration' == $active_tab ? true : false)),
-                    array('label'=>'Indemnisation', 'icon'=>'list-alt', 'url'=>'index.php?r=Indemnisation', 'active'=>('r=Indemnisation' == $active_tab ? true : false)),
+                    array('label'=>'Indemnisation', 'icon'=>'asterisk', 'url'=>'index.php?r=Indemnisation', 'active'=>('r=Indemnisation' == $active_tab ? true : false)),
                 ),                    
 
             )); ?>

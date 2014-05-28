@@ -43,11 +43,29 @@
 		<?php echo $form->error($model,'PrixJour'); ?>
 	</div>
 
-	<div class="row">
+<!--	<div class="row">
 		<?php echo $form->labelEx($model,'Date_Convention'); ?>
 		<?php echo $form->textField($model,'Date_Convention'); ?>
 		<?php echo $form->error($model,'Date_Convention'); ?>
-	</div>
+	</div>-->
+
+        <div class="row">
+            <?php echo $form->labelEx($model,'Date_Convention'); ?>
+            <?php
+            $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+                'model' => $model,
+                'attribute' => 'Date_Convention',
+                'options'=>array(
+                    'dateFormat'=>'yy-mm-dd',
+                ),
+                'htmlOptions' => array(
+                    'size' => '10',         // textField size
+                    'maxlength' => '10',    // textField maxlength
+                ),
+            ));
+            ?>
+            <?php echo $form->error($model,'Date_Convention'); ?>
+        </div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Duree_Projet'); ?>
@@ -55,11 +73,29 @@
 		<?php echo $form->error($model,'Duree_Projet'); ?>
 	</div>
 
-	<div class="row">
+	<!--<div class="row">
 		<?php echo $form->labelEx($model,'Date_Finprevu'); ?>
 		<?php echo $form->textField($model,'Date_Finprevu'); ?>
 		<?php echo $form->error($model,'Date_Finprevu'); ?>
-	</div>
+	</div>-->
+
+        <div class="row">
+            <?php echo $form->labelEx($model,'Date_Finprevu'); ?>
+            <?php
+            $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+                'model' => $model,
+                'attribute' => 'Date_Finprevu',
+                'options'=>array(
+                    'dateFormat'=>'yy-mm-dd',
+                ),
+                'htmlOptions' => array(
+                    'size' => '10',         // textField size
+                    'maxlength' => '10',    // textField maxlength
+                ),
+            ));
+            ?>
+            <?php echo $form->error($model,'Date_Finprevu'); ?>
+        </div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Proj_Fini'); ?>
