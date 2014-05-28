@@ -13,17 +13,24 @@
 	// See class documentation of CActiveForm for details on this,
 	// you need to use the performAjaxValidation()-method described there.
 	'enableAjaxValidation'=>false,
-)); ?>
+)); 
+
+$criteria=new CDbCriteria;
+
+$criteria->select='Num_SS';  // only select the 'AlId' and 'AlDescr' columns              
+
+$num_etudiants=Etudiant::model()->findAll($criteria);
+
+?>
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<?php echo $form->errorSummary($model); ?>
-
-	<div class="row">
-		<?php echo $form->labelEx($model,'Num_SS'); ?>
-		<?php echo $form->textField($model,'Num_SS'); ?>
-		<?php echo $form->error($model,'Num_SS'); ?>
-	</div>
+        
+        <div class="row">
+            <?php echo $form->labelEx($model,'Num_SS'); ?>
+            <?php echo CHtml::activeDropDownList(Etudiant::model(), 'Num_SS', CHtml::listData($num_etudiants,'Num_SS','Num_SS')); ?>
+        </div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Num_Convention'); ?>
