@@ -19,7 +19,8 @@
     $current_url=Yii::app()->request->requestUri;
     $active_tab=parse_url($current_url,PHP_URL_QUERY);
 //    $isActive = 'r=site/page&view=gestion' == $active_tab || 'r=Etudiant' == $active_tab || 'r=Convention' == $active_tab || 'r=Acompte' == $active_tab || 'r=Frais' == $active_tab;
-    $isActive = 'r=site/page&view=gestion' == $active_tab || Yii::app()->controller->id == 'etudiant' || Yii::app()->controller->id == 'convention' || Yii::app()->controller->id == 'frais' || Yii::app()->controller->id == 'acompte';
+    $isActive = 'r=site/page&view=gestion' == $active_tab || Yii::app()->controller->id == 'etudiant' || Yii::app()->controller->id == 'convention' || 
+                                                             Yii::app()->controller->id == 'frais' || Yii::app()->controller->id == 'acompte' || Yii::app()->controller->id == 'remuneration';
 
     $this->widget('bootstrap.widgets.TbNavbar',array(
     'fluid'=>'true',
