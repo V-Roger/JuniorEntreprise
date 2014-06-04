@@ -34,6 +34,8 @@ return array(
 		),
 		
 	),
+    
+        'language'=>'fr',
 
 	// application components
 	'components'=>array(
