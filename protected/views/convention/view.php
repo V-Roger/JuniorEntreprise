@@ -35,12 +35,15 @@ $this->menu=array(
 <h1>Etudiants</h1>
 
 <?php 
-$modelParticipe = Participe::model()->findbyAttributes(array('Num_Convention' =>$model->Num_Convention));
-$dataprovider=new CActiveDataProvider('participe'); 
+$dataprovider=new CActiveDataProvider('participe', array(
+            'criteria'=>array(
+                'condition'=>"Num_Convention=$model->Num_Convention",
+            ),
+        )
+    ); 
 
         $this->widget('zii.widgets.grid.CGridView', array(
 	'dataProvider'=>$dataprovider,
-        'filter'=>$modelParticipe,
 	'columns'=>array(
 		'Num_Convention',
 		'Num_SS',
