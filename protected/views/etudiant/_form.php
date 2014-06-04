@@ -32,9 +32,22 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Date_Naissance'); ?>
-		<?php echo $form->textField($model,'Date_Naissance'); ?>
-		<?php echo $form->error($model,'Date_Naissance'); ?>
+             <?php echo $form->labelEx($model,'Date_Naissance'); ?>
+            <?php
+            $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+                'model' => $model,
+                'attribute' => 'Date_Naissance',
+                'options'=>array(
+                    'dateFormat'=>'yy-mm-dd',
+                    'defaultDate'=>'1990-06-15',     
+                ),
+                'htmlOptions' => array(
+                    'size' => '10',         // textField size
+                    'maxlength' => '10',    // textField maxlength
+                ),
+            ));
+            ?>
+            <?php echo $form->error($model,'Date_Naissance'); ?>
 	</div>
 
 	<div class="row">
