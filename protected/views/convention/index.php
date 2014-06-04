@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Convention', 'url'=>array('create')),
-	array('label'=>'Manage Convention', 'url'=>array('admin')),
+	array('label'=>'Créer convention', 'url'=>array('create')),
+	array('label'=>'Gérer les conventions', 'url'=>array('admin')),
 );
 ?>
 
