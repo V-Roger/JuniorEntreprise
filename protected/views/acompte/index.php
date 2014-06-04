@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Acompte', 'url'=>array('create')),
-	array('label'=>'Manage Acompte', 'url'=>array('admin')),
+	array('label'=>'Créer un Acompte', 'url'=>array('create')),
+	array('label'=>'Gérer les Acomptes', 'url'=>array('admin')),
 );
 ?>
 

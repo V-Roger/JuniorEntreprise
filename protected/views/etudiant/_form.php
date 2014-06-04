@@ -20,19 +20,19 @@
 	<?php echo $form->errorSummary($model); ?>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Num_SS'); ?>
+		<?php echo $form->labelEx($model,'Numéro Sécurité Sociale'); ?>
 		<?php echo $form->textField($model,'Num_SS'); ?>
 		<?php echo $form->error($model,'Num_SS'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Nom_Etu'); ?>
+		<?php echo $form->labelEx($model,'Nom Étudiant'); ?>
 		<?php echo $form->textField($model,'Nom_Etu',array('size'=>30,'maxlength'=>30)); ?>
 		<?php echo $form->error($model,'Nom_Etu'); ?>
 	</div>
 
 	<div class="row">
-             <?php echo $form->labelEx($model,'Date_Naissance'); ?>
+             <?php echo $form->labelEx($model,'Date de Naissance'); ?>
             <?php
             $this->widget('zii.widgets.jui.CJuiDatePicker', array(
                 'model' => $model,
@@ -51,7 +51,7 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Adresse_Etu'); ?>
+		<?php echo $form->labelEx($model,'Adresse Étudiant'); ?>
 		<?php echo $form->textField($model,'Adresse_Etu',array('size'=>40,'maxlength'=>40)); ?>
 		<?php echo $form->error($model,'Adresse_Etu'); ?>
 	</div>

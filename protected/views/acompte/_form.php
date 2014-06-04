@@ -17,13 +17,23 @@
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-	<?php echo $form->errorSummary($model); ?>
+	<?php echo $form->errorSummary($model); 
+        $criteria=new CDbCriteria;
+        $criteria2=new CDbCriteria;
 
-	<div class="row">
+        $criteria->select='Num_SS,Nom_Etu';
+        $criteria2->select='Num_Convention,Num_Entreprise';// only select the 'AlId' and 'AlDescr' columns              
+
+        $num_etudiants=Etudiant::model()->findAll($criteria);
+        $num_convention=Convention::model()->findAll($criteria2);
+                
+        ?>
+        
+	<!--<div class="row">
 		<?php echo $form->labelEx($model,'Num_Acompte'); ?>
 		<?php echo $form->textField($model,'Num_Acompte'); ?>
 		<?php echo $form->error($model,'Num_Acompte'); ?>
-	</div>
+	</div>-->
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Montant_HT'); ?>
@@ -32,14 +42,14 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Num_SS'); ?>
-		<?php echo $form->textField($model,'Num_SS'); ?>
+		<?php echo $form->labelEx($model,'Étudiant'); ?>
+                <?php echo CHtml::activeDropDownList(Etudiant::model(), 'Num_SS', CHtml::listData($num_etudiants,'Num_SS','Num_SS','Nom_Etu')); ?>
 		<?php echo $form->error($model,'Num_SS'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Num_Convention'); ?>
-		<?php echo $form->textField($model,'Num_Convention'); ?>
+                <?php echo CHtml::activeDropDownList(Convention::model(), 'Num_Convention', CHtml::listData($num_convention,'Num_Convention','Num_Convention','Num_Entreprise')); ?>
 		<?php echo $form->error($model,'Num_Convention'); ?>
 	</div>
 
