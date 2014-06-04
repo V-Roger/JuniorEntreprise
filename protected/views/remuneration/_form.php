@@ -19,30 +19,36 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
+        
 	<div class="row">
-		<?php echo $form->labelEx($model,'Num_Convention'); ?>
+		<!--<?php echo $form->labelEx($model,'Num_Convention'); ?>
 		<?php echo $form->textField($model,'Num_Convention'); ?>
-		<?php echo $form->error($model,'Num_Convention'); ?>
+		<?php echo $form->error($model,'Num_Convention'); ?>-->
+                <?php echo $form->hiddenField($model, 'Num_Convention'); ?>
 	</div>
-
+        
+        <!--
 	<div class="row">
 		<?php echo $form->labelEx($model,'Num_SS'); ?>
 		<?php echo $form->textField($model,'Num_SS'); ?>
 		<?php echo $form->error($model,'Num_SS'); ?>
 	</div>
 
+        
 	<div class="row">
 		<?php echo $form->labelEx($model,'Num_Remuneration'); ?>
 		<?php echo $form->textField($model,'Num_Remuneration'); ?>
 		<?php echo $form->error($model,'Num_Remuneration'); ?>
 	</div>
-
+        
+        
 	<div class="row">
 		<?php echo $form->labelEx($model,'Montant_Rem'); ?>
 		<?php echo $form->textField($model,'Montant_Rem'); ?>
 		<?php echo $form->error($model,'Montant_Rem'); ?>
 	</div>
-
+        -->
+        
 	<div class="row">
 		<?php echo $form->labelEx($model,'NbreJoursTravail'); ?>
 		<?php echo $form->textField($model,'NbreJoursTravail'); ?>

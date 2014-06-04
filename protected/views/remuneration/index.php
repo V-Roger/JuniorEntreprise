@@ -7,8 +7,8 @@ $this->breadcrumbs=array(
 );
 
 $this->menu=array(
-	array('label'=>'Create Remuneration', 'url'=>array('create')),
-	array('label'=>'Manage Remuneration', 'url'=>array('admin')),
+	//array('label'=>'Create Remuneration', 'url'=>array('create')),
+	array('label'=>'Gérer les rémunerations', 'url'=>array('admin')),
 );
 ?>
 

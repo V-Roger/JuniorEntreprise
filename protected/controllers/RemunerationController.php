@@ -93,7 +93,9 @@ class RemunerationController extends Controller
 
 		if(isset($_POST['Remuneration']))
 		{
+                    $modelConvention = Convention::model()->findByPk($_POST['Remuneration']['Num_Convention']);
 			$model->attributes=$_POST['Remuneration'];
+                        $model->Montant_Rem = $_POST['Remuneration']['NbreJoursTravail']*$modelConvention->PrixJour;
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->Num_Remuneration));
 		}
