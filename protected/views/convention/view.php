@@ -57,7 +57,7 @@ $dataprovider=new CActiveDataProvider('Participe', array(
                                         'buttons'=>array(
                                             'voiretudiant'=>array(
                                             'label'=>'voir Etudiant',
-                                            'imageUrl'=>'',
+                                            'imageUrl'=>Yii::app()->request->baseUrl.'/themes/bootstrap/img/1pxTransparent.png',
                                             'options'=>array( 'class'=>'icon-user'),
                                             'url'=>'Yii::app()->createUrl("etudiant/view",array("id"=> $data->Num_SS))',
                                         ),
