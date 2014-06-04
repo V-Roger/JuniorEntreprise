@@ -40,11 +40,11 @@ $this->menu=array(
 		*/
 		array(
                     'class'=>'CButtonColumn',
-                    'template'=>'{view}{update}{delete}{ajoutetu}',
+                    'template'=>'{view}{ajoutetu}',
                     'buttons'=>array(
                         'ajoutetu' => array(
                             'label'=>'Ajouter un étudiant à cette convention',
-                            'imageUrl'=>'',
+                            'imageUrl'=>Yii::app()->request->baseUrl.'/themes/bootstrap/img/1pxTransparent.png',
                             'options'=>array('class'=>'icon-user'),
                             'url'=>'Yii::app()->createUrl("convention/ajouteretudiant", array("id"=>$data->Num_Convention))',
                         ),
