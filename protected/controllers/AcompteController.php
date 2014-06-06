@@ -64,10 +64,10 @@ class AcompteController extends Controller
 	public function actionCreate()
 	{
 		$model=new Acompte;
-
-		// Uncomment the following line if AJAX validation is needed
+                
+                // Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+                
 		if(isset($_POST['Acompte']))
 		{
 			$model->attributes=$_POST['Acompte'];
@@ -78,7 +78,7 @@ class AcompteController extends Controller
 		$this->render('create',array(
 			'model'=>$model,
 		));
-	}
+            }
 
 	/**
 	 * Updates a particular model.
