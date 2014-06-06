@@ -28,11 +28,11 @@
         $num_convention=Convention::model()->findAll($criteria2);
                 
         ?>
-	<div class="row">
+	<!--<div class="row">
 		<?php echo $form->labelEx($model,'Num_Frais'); ?>
 		<?php echo $form->textField($model,'Num_Frais'); ?>
 		<?php echo $form->error($model,'Num_Frais'); ?>
-	</div>
+	</div>-->
         
         <div class="row">
             <?php echo $form->labelEx($model,'Date_Note'); ?>
@@ -70,11 +70,11 @@
 		<?php echo $form->error($model,'Num_Convention'); ?>
 	</div>
 
-	<div class="row">
+	<!--<div class="row">
 		<?php echo $form->labelEx($model,'Num_RF'); ?>
 		<?php echo $form->textField($model,'Num_RF'); ?>
 		<?php echo $form->error($model,'Num_RF'); ?>
-	</div>
+	</div>-->
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
