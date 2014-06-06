@@ -22,7 +22,7 @@
         $criteria2=new CDbCriteria;
 
         $criteria->select='Num_SS,Nom_Etu';
-        $criteria2->select='Num_Convention,Num_Entreprise';// only select the 'AlId' and 'AlDescr' columns              
+        $criteria2->select='Num_Convention,Num_Entreprise';             
 
         $num_etudiants=Etudiant::model()->findAll($criteria);
         $num_convention=Convention::model()->findAll($criteria2);
