@@ -36,6 +36,11 @@
 		<?php echo $form->textField($model,'NbreJoursTravail'); ?>
 	</div>
 
+	<div class="row">
+		<?php echo $form->label($model,'Date_Paiement'); ?>
+		<?php echo $form->textField($model,'Date_Paiement'); ?>
+	</div>
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('Search'); ?>
 	</div>

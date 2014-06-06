@@ -47,6 +47,12 @@
 		<?php echo $form->textField($model,'Montant_Rem'); ?>
 		<?php echo $form->error($model,'Montant_Rem'); ?>
 	</div>
+        
+        <div class="row">
+		<?php echo $form->labelEx($model,'Date_Paiement'); ?>
+		<?php echo $form->textField($model,'Date_Paiement'); ?>
+		<?php echo $form->error($model,'Date_Paiement'); ?>
+	</div>
         -->
         
 	<div class="row">

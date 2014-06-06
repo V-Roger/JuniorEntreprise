@@ -25,5 +25,9 @@
 	<?php echo CHtml::encode($data->NbreJoursTravail); ?>
 	<br />
 
+	<b><?php echo CHtml::encode($data->getAttributeLabel('Date_Paiement')); ?>:</b>
+	<?php echo CHtml::encode($data->Date_Paiement); ?>
+	<br />
+
 
 </div>

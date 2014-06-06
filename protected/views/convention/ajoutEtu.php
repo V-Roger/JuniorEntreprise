@@ -17,10 +17,11 @@
 
 $criteria=new CDbCriteria;
 
-$criteria->select='Num_SS';  // only select the 'AlId' and 'AlDescr' columns              
+$criteria->select='Num_SS,Nom_Etu';  
 
 $num_etudiants=Etudiant::model()->findAll($criteria);
 $model->Num_Convention=$_GET['id'];
+
 
 ?>
 
@@ -30,7 +31,8 @@ $model->Num_Convention=$_GET['id'];
         
         <div class="row">
             <?php echo $form->labelEx($model,'Num_SS'); ?>
-            <?php echo CHtml::activeDropDownList(Etudiant::model(), 'Num_SS', CHtml::listData($num_etudiants,'Num_SS','Num_SS')); ?>
+            <?php echo CHtml::activeDropDownList($model, 'Num_SS', CHtml::listData($num_etudiants,'Num_SS','Num_SS','Nom_Etu')); ?>
+            <?php echo $form->error($model,'Num_SS'); ?>
         </div>
 
 	<div class="row">
@@ -47,7 +49,7 @@ $model->Num_Convention=$_GET['id'];
 
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ?'Create' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
 
 <?php  ConventionController::endWidget(); ?>

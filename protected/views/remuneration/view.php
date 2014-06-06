@@ -26,5 +26,6 @@ $this->menu=array(
 		'Num_Remuneration',
 		'Montant_Rem',
 		'NbreJoursTravail',
+		'Date_Paiement',
 	),
 )); ?>

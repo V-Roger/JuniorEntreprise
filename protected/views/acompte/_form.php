@@ -43,13 +43,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Étudiant'); ?>
-                <?php echo CHtml::activeDropDownList(Etudiant::model(), 'Num_SS', CHtml::listData($num_etudiants,'Num_SS','Num_SS','Nom_Etu')); ?>
+                <?php echo CHtml::activeDropDownList($model, 'Num_SS', CHtml::listData($num_etudiants,'Num_SS','Num_SS','Nom_Etu')); ?>
 		<?php echo $form->error($model,'Num_SS'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Num_Convention'); ?>
-                <?php echo CHtml::activeDropDownList(Convention::model(), 'Num_Convention', CHtml::listData($num_convention,'Num_Convention','Num_Convention','Num_Entreprise')); ?>
+                <?php echo CHtml::activeDropDownList($model, 'Num_Convention', CHtml::listData($num_convention,'Num_Convention','Num_Convention','Num_Entreprise')); ?>
 		<?php echo $form->error($model,'Num_Convention'); ?>
 	</div>
 
