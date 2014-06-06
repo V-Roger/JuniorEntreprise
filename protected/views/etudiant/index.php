@@ -32,19 +32,10 @@ $this->menu=array(
                 'Date_Naissance',
                 'Adresse_Etu',
 		'Num_SS',
-            /*    array(
+                array(
                     'class'=>'CButtonColumn',
-                    'template'=>'{voirprojet}',
-                    'buttons'=>array(
-                        'voirprojet' => array(
-                            'label'=>"Voir convention de l'etudiant",
-                            'imageUrl'=>Yii::app()->request->baseUrl.'/themes/bootstrap/img/1pxTransparent.png',
-                            'options'=>array('class'=>'icon-search'),
-                            'url'=>'Yii::app()->createUrl("convention/ajouteretudiant", array("id"=>$data->Num_Convention))',
-                        ),
-                    ),
-               ),*/
-            
+                    'template'=>'{view}',
+               ),         
             ),       
     ));
 ?>
