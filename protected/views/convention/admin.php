@@ -1,4 +1,4 @@
-<?php
+    <?php
 /* @var $this ConventionController */
 /* @var $model Convention */
 
@@ -52,7 +52,16 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'Date_Convention',
 		'Duree_Projet',
 		array(
-			'class'=>'CButtonColumn',
+                    'class'=>'CButtonColumn',
+                    'template'=>'{view} {update} {delete} {terminerProjet}',
+                    'buttons'=>array(
+                        'terminerProjet'=>array(
+                            'label'=>'Clore le projet',
+                            'imageUrl'=>Yii::app()->request->baseUrl.'/themes/bootstrap/img/1pxTransparent.png',
+                            'options'=>array('class'=>'icon-check'),
+                            'url'=>'Yii::app()->createUrl("convention/close", array("id"=> $data->Num_Convention))',
+                        ),    
+                    ),
 		),
 	),
 )); ?>

@@ -34,7 +34,7 @@ class ConventionController extends Controller {
                 'users' => array('@'),
             ),
             array('allow', // allow admin user to perform 'admin' and 'delete' actions
-                'actions' => array('admin', 'delete'),
+                'actions' => array('admin', 'delete', 'close'),
                 'users' => array('admin'),
             ),
             array('deny', // deny all users
@@ -127,6 +127,25 @@ class ConventionController extends Controller {
        $this->render('participeView', array(
                'model'=>$model,
            ));
+    }
+    
+    /*
+     * $id = Num_Convention
+     * 
+     */
+    public function actionClose($id){
+        $model = $this->loadModel($id);
+    
+        $model->Proj_Fini = 1;
+        
+        if($model->save()){
+            $modelRemunerations = Remuneration::model()->findAllByAttributes(array('Num_Convention'=>$id));
+            foreach($modelRemunerations as $remuneration){
+                $remuneration->Date_Paiement = date("Y-m-d");
+                $remuneration->save();                
+            }
+            $this->redirect(array('view', 'id' => $model->Num_Convention));
+        }
     }
 
     /**

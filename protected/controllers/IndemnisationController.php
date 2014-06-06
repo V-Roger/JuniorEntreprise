@@ -122,7 +122,12 @@ class IndemnisationController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Indemnisation');
+		$dataProvider=new CActiveDataProvider('Remuneration', array(
+                        'criteria'=>array(
+                            'condition'=>"Date_Paiement is not NULL",
+                        ),
+                    )
+                );
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
