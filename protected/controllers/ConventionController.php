@@ -117,11 +117,11 @@ class ConventionController extends Controller {
            $model->attributes = $_POST['Participe'];
            if ($model->save()){               
                 $modelRemuneration = new Remuneration;
-                $modelRemuneration->Num_Convention = $_POST['Participe']['Num_Convention'];
-                $modelRemuneration->Num_SS = $_POST['Participe']['Num_SS'];
+                $modelRemuneration->Num_Convention = $model->Num_Convention;
+                $modelRemuneration->Num_SS = $model->Num_SS;
                 $modelRemuneration->save();
                 $this->redirect(array('view', 'id' => $model->Num_Convention)); 
-           }
+            }
         }
        
        $this->render('participeView', array(

@@ -9,8 +9,9 @@
  * @property integer $Num_Remuneration
  * @property double $Montant_Rem
  * @property integer $NbreJoursTravail
+ * @property string $Date_Paiement
  */
-class Remuneration extends CActiveRecord
+class REMUNERATION extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
@@ -28,12 +29,13 @@ class Remuneration extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('Num_Convention, Num_SS, Num_Remuneration', 'required'),
-			array('Num_Convention, Num_SS, Num_Remuneration, NbreJoursTravail', 'numerical', 'integerOnly'=>true),
+			array('Num_Convention, Num_SS', 'required'),
+			array('Num_Convention, Num_SS, NbreJoursTravail', 'numerical', 'integerOnly'=>true),
 			array('Montant_Rem', 'numerical'),
+			array('Date_Paiement', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('Num_Convention, Num_SS, Num_Remuneration, Montant_Rem, NbreJoursTravail', 'safe', 'on'=>'search'),
+			array('Num_Convention, Num_SS, Num_Remuneration, Montant_Rem, NbreJoursTravail, Date_Paiement', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,6 +61,7 @@ class Remuneration extends CActiveRecord
 			'Num_Remuneration' => 'Num Remuneration',
 			'Montant_Rem' => 'Montant Rem',
 			'NbreJoursTravail' => 'Nbre Jours Travail',
+			'Date_Paiement' => 'Date Paiement',
 		);
 	}
 
@@ -85,6 +88,7 @@ class Remuneration extends CActiveRecord
 		$criteria->compare('Num_Remuneration',$this->Num_Remuneration);
 		$criteria->compare('Montant_Rem',$this->Montant_Rem);
 		$criteria->compare('NbreJoursTravail',$this->NbreJoursTravail);
+		$criteria->compare('Date_Paiement',$this->Date_Paiement,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -95,7 +99,7 @@ class Remuneration extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Remuneration the static model class
+	 * @return REMUNERATION the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

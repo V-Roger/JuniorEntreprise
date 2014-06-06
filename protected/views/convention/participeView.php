@@ -29,3 +29,4 @@ $this->menu=array(
 
 
 <?php $this->renderPartial('ajoutEtu', array('model'=>$model)); ?>
+
