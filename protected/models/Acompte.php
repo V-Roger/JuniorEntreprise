@@ -27,8 +27,8 @@ class Acompte extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('Num_Acompte, Num_SS, Num_Convention', 'required'),
-			array('Num_Acompte, Num_SS, Num_Convention', 'numerical', 'integerOnly'=>true),
+			array('Num_SS, Num_Convention', 'required'),
+			array('Num_SS, Num_Convention', 'numerical', 'integerOnly'=>true),
 			array('Montant_HT', 'numerical'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
