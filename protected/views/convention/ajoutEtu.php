@@ -36,9 +36,10 @@ $model->Num_Convention=$_GET['id'];
         </div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Num_Convention'); ?>
+		<!--<?php echo $form->labelEx($model,'Num_Convention'); ?>
 		<?php echo $form->textField($model,'Num_Convention'); ?>
-		<?php echo $form->error($model,'Num_Convention'); ?>
+		<?php echo $form->error($model,'Num_Convention'); ?>-->
+                <?php echo $form->hiddenField($model, 'Num_Convention'); ?>
 	</div>
 
 	<div class="row">
