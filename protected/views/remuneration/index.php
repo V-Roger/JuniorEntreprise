@@ -34,5 +34,8 @@ $this->menu=array(
 		'Montant_Rem',
 		'NbreJoursTravail',
 		'Date_Paiement',
+		array(
+			'class'=>'CButtonColumn',
+		),
 	),
 )); ?>

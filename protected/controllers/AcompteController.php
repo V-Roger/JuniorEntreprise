@@ -64,10 +64,16 @@ class AcompteController extends Controller
 	public function actionCreate()
 	{
 		$model=new Acompte;
-
-		// Uncomment the following line if AJAX validation is needed
+                // Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+            /*    $criteria= new CDbCriteria();
+                $criteria->condition="Num_SS=:Num_SS AND Num_Convention=:Num_Convention";
+                $criteria->params = array(':Num_SS'=>$model->Num_SS,':Num_Convention'=>$model->Num_Convention);
+                $count= $model->count($criteria);*/
+                
+               // var_dump($count);
+                
+            //  if($count<4) {
 		if(isset($_POST['Acompte']))
 		{
 			$model->attributes=$_POST['Acompte'];
@@ -78,7 +84,8 @@ class AcompteController extends Controller
 		$this->render('create',array(
 			'model'=>$model,
 		));
-	}
+            }
+  //  }
 
 	/**
 	 * Updates a particular model.
