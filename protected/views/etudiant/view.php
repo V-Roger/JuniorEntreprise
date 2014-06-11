@@ -27,3 +27,38 @@ $this->menu=array(
 		'Adresse_Etu',
 	),
 )); ?>
+
+
+<br>
+<hr>
+<br>
+<h1>Conventions</h1>
+
+<?php 
+$dataprovider=new CActiveDataProvider('Participe', array(
+            'criteria'=>array(
+                'condition'=>"Num_SS=$model->Num_SS",
+            ),
+        )
+    ); 
+
+        $this->widget('zii.widgets.grid.CGridView', array(
+	'dataProvider'=>$dataprovider,
+	'columns'=>array(
+		'Num_Convention',
+		'Num_SS',
+		'Nature_Etu',
+                                    array(
+                                        'class'=>'CButtonColumn',
+                                        'template'=>'{voirconvention}',
+                                        'buttons'=>array(
+                                            'voirconvention'=>array(
+                                            'label'=>'Voir Convention',
+                                            'imageUrl'=>Yii::app()->request->baseUrl.'/themes/bootstrap/img/1pxTransparent.png',
+                                            'options'=>array( 'class'=>'icon-align-justify'),
+                                            'url'=>'Yii::app()->createUrl("convention/view",array("id"=> $data->Num_Convention))',
+                                        ),
+                                   ),
+                              ),
+	),
+)); ?>

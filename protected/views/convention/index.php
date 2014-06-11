@@ -36,8 +36,10 @@ $this->menu=array(
 		'Duree_Projet',
 		/*
 		'Date_Finprevu',
+                 * 
+                 */
 		'Proj_Fini',
-		*/
+		
 		array(
                     'class'=>'CButtonColumn',
                     'template'=>'{view}{ajoutetu}',

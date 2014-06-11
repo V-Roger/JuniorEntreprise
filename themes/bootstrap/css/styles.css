@@ -127,3 +127,8 @@ border-bottom: none;
 form>.row{
     margin-left:0;
 }
+
+.icon-euro:before{
+    content : '€';
+    font-weight: bold;
+}

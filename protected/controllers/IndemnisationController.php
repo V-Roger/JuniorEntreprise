@@ -44,15 +44,40 @@ class IndemnisationController extends Controller
 			),
 		);
 	}
-
+        
+        public function calculateAcomptes($data, $row)
+        {
+            $totalAcomptes = Yii::app()->db->createCommand()
+            ->select('sum(Montant_HT)')
+            ->from('ACOMPTE')
+            ->where('Num_SS=:Num_SS and Num_Convention =:Num_Convention', array(':Num_SS' => $data->Num_SS, ':Num_Convention' => $data->Num_Convention))
+            ->queryScalar();
+            
+            return($totalAcomptes);
+        }
+        
+        public function calculateIndemnisation($data, $row)
+        {
+            $indemnisationVersee = 0;
+            
+            $indemnisationVersee = $data->Montant_Rem - $this->calculateAcomptes($data, $row);
+            return($indemnisationVersee);
+        }
+        
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID of the model to be displayed
 	 */
 	public function actionView($id)
 	{
+            $dataProvider=new CActiveDataProvider('Remuneration', array(
+                        'criteria'=>array(
+                            'condition'=>"Num_Convention = $id",
+                        ),
+                    )
+                );
 		$this->render('view',array(
-			'model'=>$this->loadModel($id),
+			'dataProvider'=>$dataProvider,
 		));
 	}
 
@@ -122,9 +147,9 @@ class IndemnisationController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Remuneration', array(
+		$dataProvider=new CActiveDataProvider('Convention', array(
                         'criteria'=>array(
-                            'condition'=>"Date_Paiement is not NULL",
+                            'condition'=>"Proj_Fini = 1",
                         ),
                     )
                 );

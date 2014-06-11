@@ -11,7 +11,7 @@
  * @property integer $NbreJoursTravail
  * @property string $Date_Paiement
  */
-class REMUNERATION extends CActiveRecord
+class Remuneration extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
