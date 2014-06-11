@@ -22,7 +22,7 @@
         $criteria2=new CDbCriteria;
 
         $criteria->select='Num_SS,Nom_Etu';
-        $criteria2->select='Num_Convention,Num_Entreprise';             
+        $criteria2->select='Num_Convention,Num_Entreprise';
 
         $num_etudiants=Etudiant::model()->findAll($criteria);
         $num_convention=Convention::model()->findAll($criteria2);
@@ -46,10 +46,10 @@
                 <?php echo CHtml::activeDropDownList($model, 'Num_SS', CHtml::listData($num_etudiants,'Num_SS','Num_SS','Nom_Etu')); ?>
 		<?php echo $form->error($model,'Num_SS'); ?>
 	</div>
-
+        
 	<div class="row">
 		<?php echo $form->labelEx($model,'Num_Convention'); ?>
-                <?php echo CHtml::activeDropDownList($model, 'Num_Convention', CHtml::listData($num_convention,'Num_Convention','Num_Convention','Num_Entreprise')); ?>
+                <?php echo CHtml::activeDropDownList($model, 'Num_Convention', CHtml::listData($num_convention,'Num_Convention','Num_Convention','Num_Entreprise'))?>
 		<?php echo $form->error($model,'Num_Convention'); ?>
 	</div>
 
